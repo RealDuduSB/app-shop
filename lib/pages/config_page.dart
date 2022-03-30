@@ -1,3 +1,4 @@
+import 'package:app_shop/app_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,11 +26,9 @@ class _ConfigState extends State<Config> {
               Text("Trocar tema ",
                   style: GoogleFonts.lato(fontSize: 25, color: Colors.black)),
               Switch(
-                  value: isDarkTheme,
+                  value: AppController.instance.isDarkTheme,
                   onChanged: (value) {
-                    setState(() {
-                      isDarkTheme = value;
-                    });
+                    AppController.instance.changeTheme();
                   })
             ],
           )

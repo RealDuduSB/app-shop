@@ -1,3 +1,4 @@
+import 'package:app_shop/pages/checkout_page.dart';
 import 'package:app_shop/pages/config_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,6 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: <Widget>[
             ListTile(
-              leading: Icon(Icons.person, color: Color.fromRGBO(0, 0, 0, 1)),
               title: Text("Configurações",
                   style: GoogleFonts.lato(fontSize: 27, color: Colors.black)),
               onTap: () {
@@ -30,7 +30,36 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Shop generic"),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                  height: 70,
+                  width: 250,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Pesquisa",
+                      icon: Icon(Icons.search),
+                    ),
+                  )),
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CheckOutPage()));
+                  },
+                  icon: Icon(Icons.shopping_cart))
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

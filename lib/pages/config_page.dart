@@ -25,15 +25,24 @@ class _ConfigState extends State<Config> {
             children: [
               Text("Trocar tema ",
                   style: GoogleFonts.lato(fontSize: 25, color: Colors.black)),
-              Switch(
-                  value: AppController.instance.isDarkTheme,
-                  onChanged: (value) {
-                    AppController.instance.changeTheme();
-                  })
+              TrocaTema(),
             ],
           )
         ],
       ),
     );
+  }
+}
+
+class TrocaTema extends StatelessWidget {
+  const TrocaTema({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+        value: AppController.instance.isDarkTheme,
+        onChanged: (value) {
+          AppController.instance.changeTheme();
+        });
   }
 }

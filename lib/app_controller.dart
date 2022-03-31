@@ -5,7 +5,7 @@ class AppController extends ChangeNotifier {
 
   bool isDarkTheme = false;
   changeTheme() {
-    isDarkTheme = !isDarkTheme;
+    isDarkTheme = !isDarkTheme; //atribui negativo
     notifyListeners();
   }
 }

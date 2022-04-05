@@ -1,5 +1,8 @@
 import 'package:app_shop/app_controller.dart';
+import 'package:app_shop/pages/checkout_page.dart';
+import 'package:app_shop/pages/config_page.dart';
 import 'package:app_shop/pages/home_page.dart';
+import 'package:app_shop/pages/sobre.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -17,6 +20,9 @@ class AppWidget extends StatelessWidget {
         initialRoute: '/home',
         routes: {
           '/home': (context) => HomePage(),
+          '/sobre': (context) => Sobre(),
+          '/config': (context) => Config(),
+          '/checkout': (context) => CheckOutPage(),
         },
         debugShowCheckedModeBanner: false,
       ),

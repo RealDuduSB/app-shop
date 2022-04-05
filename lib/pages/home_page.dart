@@ -44,12 +44,15 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text("Shop generic"),
         ),
-        body: Column(
-          children: [
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: ListView(children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
+                    padding: EdgeInsets.all(10),
                     height: 70,
                     width: 250,
                     child: TextFormField(
@@ -108,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             )
-          ],
+          ]),
         ));
   }
 }

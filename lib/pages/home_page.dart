@@ -22,20 +22,14 @@ class _HomePageState extends State<HomePage> {
                 title: Text("Configurações",
                     style: GoogleFonts.lato(fontSize: 27, color: Colors.black)),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Config()),
-                  );
+                  Navigator.of(context).pushNamed('/config');
                 },
               ),
               ListTile(
                 title: Text("Sobre",
                     style: GoogleFonts.lato(fontSize: 27, color: Colors.black)),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Sobre()),
-                  );
+                  Navigator.of(context).pushNamed('/sobre');
                 },
               ),
             ],
@@ -70,10 +64,7 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {}, icon: Icon(Icons.filter_list_alt)),
                       IconButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CheckOutPage()));
+                            Navigator.of(context).pushNamed('/checkout');
                           },
                           icon: Icon(Icons.shopping_cart))
                     ],

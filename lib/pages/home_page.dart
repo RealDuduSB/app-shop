@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     child: TextFormField(
                       decoration: InputDecoration(
+                        border: OutlineInputBorder(),
                         labelText: "Pesquisa",
                         icon: Icon(Icons.search),
                       ),

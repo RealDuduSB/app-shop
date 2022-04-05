@@ -14,7 +14,10 @@ class AppWidget extends StatelessWidget {
               ? Brightness.dark
               : Brightness.light,
         ),
-        home: HomePage(),
+        initialRoute: '/home',
+        routes: {
+          '/home': (context) => HomePage(),
+        },
         debugShowCheckedModeBanner: false,
       ),
     );

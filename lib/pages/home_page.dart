@@ -89,6 +89,15 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: <Widget>[
             ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Minha conta",
+                  style: GoogleFonts.lato(fontSize: 27, color: Colors.black)),
+              onTap: () {
+                Navigator.of(context).pushNamed('/config');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.draw),
               title: Text("Configurações",
                   style: GoogleFonts.lato(fontSize: 27, color: Colors.black)),
               onTap: () {
@@ -96,6 +105,7 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
+              leading: Icon(Icons.info_outline),
               title: Text("Sobre",
                   style: GoogleFonts.lato(fontSize: 27, color: Colors.black)),
               onTap: () {
@@ -108,7 +118,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Shop generic"),
       ),
-      body: _body(),
+      body: Stack(children: [
+        Container(
+          color: Colors.orangeAccent,
+        ),
+        _body(),
+      ]),
     );
   }
 }

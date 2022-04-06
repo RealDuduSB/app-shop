@@ -18,17 +18,21 @@ class _ConfigState extends State<Config> {
         title: Text("Configurações",
             style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
       ),
-      body: ListView(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text("Trocar tema ",
-                  style: GoogleFonts.lato(fontSize: 25, color: Colors.black)),
-              TrocaTema(),
-            ],
-          )
-        ],
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: ListView(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text("Trocar tema ",
+                    style: GoogleFonts.lato(fontSize: 25, color: Colors.black)),
+                TrocaTema(),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

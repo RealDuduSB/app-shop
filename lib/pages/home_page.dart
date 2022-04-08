@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        Divider(),
+        SizedBox(height: 15),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        Divider(),
+        SizedBox(height: 15),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
